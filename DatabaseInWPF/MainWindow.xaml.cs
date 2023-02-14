@@ -32,23 +32,49 @@ namespace DatabaseInWPF
 
         public void Do_assetsButton_Click(object sender, RoutedEventArgs e, OleDbConnection cq)
         {
-            string query = "select *from Assets";
+            string query = "select * from Assets";
             OleDbCommand cmd = new OleDbCommand(query, cq);
             cq.Open();
             OleDbDataReader read = cmd.ExecuteReader();
             string data = "";
-            while (read.Read()) 
+            while (read.Read())
             {
-                data += read[0].ToString() + "\n";
+                data += read[0].ToString() + "\t" + read[1].ToString() + "\t" + read[2].ToString() + "\n";
             }
+            cq.Close();
+            assetsTextBox.Text = data;
 
-            AssetsText.Text = data;
         }
+        public void Do_employeesButton_Click(object sender, RoutedEventArgs e, OleDbConnection cq)
+        {
+            string query = "select * from Employee";
+            OleDbCommand cmd = new OleDbCommand(query, cq);
+            cq.Open();
+            OleDbDataReader read = cmd.ExecuteReader();
+            string data = "";
+            while (read.Read())
+            {
+                data += read[0].ToString() + "\t" + read[1].ToString() + "\t" + read[2].ToString() + "\n";
+            }
+            cq.Close();
+            employeesTextbox.Text = data;
 
+        }
         private void assetsButton_Click(object sender, RoutedEventArgs e)
         {
+
             Do_assetsButton_Click(sender, e, cn);
         }
 
+        private void employeesButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            Do_employeesButton_Click(sender, e, cn);
+        }
+
+        private void assetsTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:DatabaseInWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="assetsButton" Content="See Assets" HorizontalAlignment="Left" Margin="270,93,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="AssetsText" HorizontalAlignment="Left" Margin="55,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="93"/>
+    <Grid Background="#FFBC5B5B">
+        <Button x:Name="assetsButton" Content="See Assets" HorizontalAlignment="Left" Margin="270,93,0,0" VerticalAlignment="Top" Click="assetsButton_Click"/>
+        <TextBox x:Name="assetsTextBox" HorizontalAlignment="Left" Height="108" Margin="56,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"/>
+        <TextBox x:Name="employeesTextbox" HorizontalAlignment="Left" Height="108" Margin="552,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"/>
+        <Button x:Name="employeesButton" Content="See Employees" HorizontalAlignment="Left" Margin="464,89,0,0" VerticalAlignment="Top" Click="employeesButton_Click"/>
     </Grid>
 </Window>

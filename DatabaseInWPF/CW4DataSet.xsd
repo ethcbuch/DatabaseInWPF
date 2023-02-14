@@ -7,7 +7,7 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CW4ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CW4ConnectionString (Settings)" PropertyReference="ApplicationSettings.DatabaseInWPF.Properties.Settings.GlobalReference.Default.CW4ConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Table1TableAdapter" GeneratorDataComponentClassName="Table1TableAdapter" Name="Table1" UserDataComponentName="Table1TableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployeeTableAdapter" GeneratorDataComponentClassName="EmployeeTableAdapter" Name="Employee" UserDataComponentName="EmployeeTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="CW4ConnectionString (Settings)" DbObjectName="Table1" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
@@ -62,7 +62,7 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Table2TableAdapter" GeneratorDataComponentClassName="Table2TableAdapter" Name="Table2" UserDataComponentName="Table2TableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AssetsTableAdapter" GeneratorDataComponentClassName="AssetsTableAdapter" Name="Assets" UserDataComponentName="AssetsTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="CW4ConnectionString (Settings)" DbObjectName="Table2" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
@@ -95,21 +95,21 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="CW4DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="CW4DataSet" msprop:Generator_DataSetName="CW4DataSet">
+  <xs:element name="CW4DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CW4DataSet" msprop:Generator_UserDSName="CW4DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Table1" msprop:Generator_RowEvHandlerName="Table1RowChangeEventHandler" msprop:Generator_RowDeletedName="Table1RowDeleted" msprop:Generator_RowDeletingName="Table1RowDeleting" msprop:Generator_RowEvArgName="Table1RowChangeEvent" msprop:Generator_TablePropName="Table1" msprop:Generator_RowChangedName="Table1RowChanged" msprop:Generator_RowChangingName="Table1RowChanging" msprop:Generator_TableClassName="Table1DataTable" msprop:Generator_RowClassName="Table1Row" msprop:Generator_TableVarName="tableTable1" msprop:Generator_UserTableName="Table1">
+        <xs:element name="Employee" msprop:Generator_TableClassName="EmployeeDataTable" msprop:Generator_RowEvArgName="EmployeeRowChangeEvent" msprop:Generator_TableVarName="tableEmployee" msprop:Generator_TablePropName="Employee" msprop:Generator_RowDeletingName="EmployeeRowDeleting" msprop:Generator_RowChangingName="EmployeeRowChanging" msprop:Generator_RowDeletedName="EmployeeRowDeleted" msprop:Generator_RowEvHandlerName="EmployeeRowChangeEventHandler" msprop:Generator_UserTableName="Employee" msprop:Generator_RowChangedName="EmployeeRowChanged" msprop:Generator_RowClassName="EmployeeRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="EmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" />
-              <xs:element name="LastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_UserColumnName="LastName" minOccurs="0">
+              <xs:element name="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" />
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="FirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_UserColumnName="FirstName" minOccurs="0">
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
@@ -119,18 +119,18 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Table2" msprop:Generator_RowEvHandlerName="Table2RowChangeEventHandler" msprop:Generator_RowDeletedName="Table2RowDeleted" msprop:Generator_RowDeletingName="Table2RowDeleting" msprop:Generator_RowEvArgName="Table2RowChangeEvent" msprop:Generator_TablePropName="Table2" msprop:Generator_RowChangedName="Table2RowChanged" msprop:Generator_RowChangingName="Table2RowChanging" msprop:Generator_TableClassName="Table2DataTable" msprop:Generator_RowClassName="Table2Row" msprop:Generator_TableVarName="tableTable2" msprop:Generator_UserTableName="Table2">
+        <xs:element name="Assets" msprop:Generator_TableClassName="AssetsDataTable" msprop:Generator_RowEvArgName="AssetsRowChangeEvent" msprop:Generator_TableVarName="tableAssets" msprop:Generator_TablePropName="Assets" msprop:Generator_RowDeletingName="AssetsRowDeleting" msprop:Generator_RowChangingName="AssetsRowChanging" msprop:Generator_RowDeletedName="AssetsRowDeleted" msprop:Generator_RowEvHandlerName="AssetsRowChangeEventHandler" msprop:Generator_UserTableName="Assets" msprop:Generator_RowChangedName="AssetsRowChanged" msprop:Generator_RowClassName="AssetsRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="EmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" minOccurs="0" />
-              <xs:element name="AssetID" msprop:Generator_ColumnPropNameInRow="AssetID" msprop:Generator_ColumnPropNameInTable="AssetIDColumn" msprop:Generator_ColumnVarNameInTable="columnAssetID" msprop:Generator_UserColumnName="AssetID" minOccurs="0">
+              <xs:element name="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" minOccurs="0" />
+              <xs:element name="AssetID" msprop:Generator_ColumnVarNameInTable="columnAssetID" msprop:Generator_ColumnPropNameInRow="AssetID" msprop:Generator_ColumnPropNameInTable="AssetIDColumn" msprop:Generator_UserColumnName="AssetID" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_UserColumnName="Description" minOccurs="0">
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
@@ -143,13 +143,13 @@
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Table1" />
+      <xs:selector xpath=".//mstns:Employee" />
       <xs:field xpath="mstns:EmployeeID" />
     </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Table1Table2" msdata:parent="Table1" msdata:child="Table2" msdata:parentkey="EmployeeID" msdata:childkey="EmployeeID" msprop:Generator_UserParentTable="Table1" msprop:Generator_UserChildTable="Table2" msprop:Generator_RelationVarName="relationTable1Table2" msprop:Generator_ChildPropName="GetTable2Rows" msprop:Generator_ParentPropName="Table1Row" msprop:Generator_UserRelationName="Table1Table2" />
+      <msdata:Relationship name="Table1Table2" msdata:parent="Employee" msdata:child="Assets" msdata:parentkey="EmployeeID" msdata:childkey="EmployeeID" msprop:Generator_UserChildTable="Assets" msprop:Generator_ChildPropName="GetAssetsRows" msprop:Generator_UserRelationName="Table1Table2" msprop:Generator_RelationVarName="relationTable1Table2" msprop:Generator_UserParentTable="Employee" msprop:Generator_ParentPropName="Table1Row" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
